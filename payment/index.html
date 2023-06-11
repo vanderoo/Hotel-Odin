@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../src/css/main.css" />
+    <link rel="stylesheet" href="../src/css/payment.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
     <link rel="icon" href="../assets/images/favodin.png" type="image/svg+xml" />
@@ -49,6 +50,123 @@
         </nav>
     </header>
 
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center subtitle-odin">
+                        <h2>Hotel Booking</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="checkin">Check-in Date</label>
+                                <input type="date" id="checkin" class="form-control" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="checkout">Check-out Date</label>
+                                <input type="date" id="checkout" class="form-control" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Summary</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="d-flex">
+                                        <div class="room-image">
+                                            <img src="/assets/images/hotel.svg" alt="Room Image" class="img-fluid mr-2">
+                                        </div>
+                                        <div class="room-info">
+                                            <h5>Superior Room</h5>
+                                            <p>Bed: Twin bed</p>
+                                            <p>Guests: 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex flex-column">
+                                        <p class="mb-0">Price: Rp. 800.000/night</p>
+                                        <p class="mb-0">Promo: - </p>
+                                        <p class="mb-0">Extra: - </p>
+                                        <hr>
+                                        <p class="mb-0">Night(s): 2</p>
+                                        <h5 class="mt-auto">Total: Rp. 1.600.000</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="accordion" id="paymentAccordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Payment Method
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#paymentAccordion">
+                                <div class="card-body">
+                                    <ul class="payment-methods">
+                                        <li onclick="toggleSelected(this)">
+                                            <img src="/assets/images/bca.svg" alt="BCA Logo" class="bank-logo">
+                                            BCA
+                                        </li>
+                                        <li onclick="toggleSelected(this)">
+                                            <img src="/assets/images/bni.svg" alt="BNI Logo" class="bank-logo">
+                                            BNI
+                                        </li>
+                                        <li onclick="toggleSelected(this)">
+                                            <img src="/assets/images/mandiri.svg" alt="Mandiri Logo" class="bank-logo">
+                                            Mandiri
+                                        </li>
+                                        <li onclick="toggleSelected(this)">
+                                            <img src="/assets/images/permata.svg" alt="Permata Logo" class="bank-logo">
+                                            Permata
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-primary btn-block">Pay</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
     <footer class="footer mt-auto py-3">
         <div class="container">
             <div class="text-center">
@@ -58,6 +176,15 @@
     </footer>
 
     <script src="../src/js/main.js"></script>
+    <script>
+        function toggleSelected(element) {
+            var listItems = document.querySelectorAll('.payment-methods li');
+            for (var i = 0; i < listItems.length; i++) {
+                listItems[i].classList.remove("selected");
+            }
+            element.classList.add("selected");
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

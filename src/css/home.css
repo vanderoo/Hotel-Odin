@@ -1,6 +1,5 @@
 /*Hero*/
 .hero {
-  margin-top: 80px;
   background-color: rgba(36, 171, 112, 0.1);
   padding: 40px 0;
 }
@@ -41,19 +40,6 @@
   min-height: 100%;
 }
 
-.explore h2 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 60px;
-
-  color: #000000;
-}
-
-.home-subtitle-odin {
-  margin-bottom: 40px;
-}
 
 .explore .row .card h3 {
   font-family: "Poppins";

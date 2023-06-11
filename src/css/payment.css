@@ -1,0 +1,37 @@
+.room-image {
+  margin-right: 20px;
+}
+
+.accordion button {
+  color: #24ab70;
+}
+.accordion button:hover {
+  color: #1f8d5d;
+}
+
+main .btn-primary {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.payment-methods li {
+  cursor: pointer;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #222222;
+}
+
+.payment-methods li.selected {
+  background-color: #24ab712d;
+}
+
+.payment-methods li:hover {
+  background-color: rgba(36, 171, 112, 0.1);
+}
