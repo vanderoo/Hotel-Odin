@@ -6,6 +6,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+main {
+  margin-bottom: 80px;
+}
+
 .navbar-nav {
   margin-left: auto;
 }
@@ -49,7 +53,6 @@ body {
 .footer {
   background-color: #24ab70;
   text-align: center;
-  margin-top: 80px !important;
 }
 
 .footer .text-muted {
